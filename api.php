@@ -1,19 +1,21 @@
 <?php
+    //Define el tipo del contenido
+
     header("Content-Type : application/json");
 
+    //Este convierte todos los datos de los input en un array asociativo
+
     $_DATA = json_encode(file_get_contents("php://input", true));
+
+    //Este se usa para obtener el metodo http de la solicitud
     
     $_METHOD = $_SERVER["REQUEST_METHOD"];
 
-    $_HEADERS = apache_request_headers();
+    //Se utiliza para obtener los headers con un array asociativo
+
+    $_HEADERS = getallheaders();
+
+    //Para mostrar los headers
 
     var_dump($_HEADERS);
-
-    //Para mostrar los datos recibidos desde el dom
-
-    //var_dump($_FILES);
-
-    //Mover un archivo enviado desde el html a la carpeta madre, el segundo paramtreo
-
-    //move_uploaded_file($_FILES["archivo"]["tmp_name"], "img/M1.jpg");
 ?>
