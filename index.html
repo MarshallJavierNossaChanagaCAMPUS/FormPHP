@@ -10,15 +10,18 @@
 </head>
 <body>
     <!-- Action es el archivo a donde va a redireccionar -->
-    <form action="api.php" method="post" enctype="multipart/form-data">
+    <form id="myForm">
         <input type="text" name="nombre"> <br>
         <input type="text" name="alias"> <br>
         <input type="text" name="descripcion"> <br>
-        <input type="file" name="archivo"> <br>
+        <!-- <input type="file" name="archivo"> <br> -->
         <input type="checkbox" name="pasatiempos[]" value="programar"><label>Programar</label>
         <input type="checkbox" name="pasatiempos[]" value="musica"><label>Musica</label>
         <input type="checkbox" name="pasatiempos[]" value="diseño"><label>Diseño</label> <br>
         <input type="submit" value="Enviar">
     </form>
+    <pre>
+
+    </pre>
 </body>
 </html>
